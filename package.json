@@ -1,0 +1,13 @@
+{
+  "name": "@pureta/pug",
+  "pureta": {
+    "main": "./plugin.js",
+    "dependencies": []
+  },
+  "dependencies": {
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/pug": "^2.0.4"
+  }
+}
