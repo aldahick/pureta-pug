@@ -1,5 +1,11 @@
 {
   "name": "@pureta/pug",
+  "description": "Pureta plugin providing Pug support",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/pureta/pug",
+  "repository": "https://github.com/pureta/pug",
+  "bugs": "https://github.com/pureta/pug/issues",
   "pureta": {
     "main": "./plugin.js",
     "dependencies": []
