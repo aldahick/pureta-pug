@@ -8,9 +8,10 @@ export default class PugPlugin extends pureta.Plugin {
         this.app.on("server:init", async () => {
             this.app.server.express.engine("pug", pug.renderFile);
             this.app.server.express.set("view engine", "pug");
-            // TODO use config for dev mode
-            this.app.server.express.locals.pretty = true;
-            this.app.server.express.disable("view cache");
+            if (this.app.configs.global.get("dev.enable")) {
+                this.app.server.express.locals.pretty = true;
+                this.app.server.express.disable("view cache");
+            }
         });
         this.app.on("request:responding", async (handler: pureta.RequestHandler) => {
             const html = await new Promise((resolve, reject) => {
