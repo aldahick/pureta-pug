@@ -21,7 +21,6 @@ export default class PugPlugin extends pureta.Plugin {
                 });
             });
             handler.res.send(html);
-            handler.res.finished = true;
         });
     }
 }
